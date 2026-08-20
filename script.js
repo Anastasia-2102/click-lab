@@ -12,8 +12,10 @@ answer1.addEventListener("click", function () {
 
 answer2.addEventListener("click", function () {
   result.textContent = "Not quite!";
+  document.body.style.backgroundColor = "pink";
 });
 
 answer3.addEventListener("click", function () {
   result.textContent = "Not quite!";
+  document.body.style.backgroundColor = "pink";
 });
