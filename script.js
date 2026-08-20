@@ -14,6 +14,9 @@ let answer3 = document.getElementById("answer-3");
 
 let result = document.getElementById("result-1");
 
+let hintButton = document.getElementById("hint-button");
+let hint = document.getElementById("hint-1");
+
 answer1.addEventListener("click", function () {
   result.textContent = "Correct! 🎉";
 });
@@ -26,4 +29,8 @@ answer2.addEventListener("click", function () {
 answer3.addEventListener("click", function () {
   result.textContent = "Not quite!";
   document.body.style.backgroundColor = "pink";
+});
+
+hintButton.addEventListener("click", function () {
+  hint.textContent = "Hint: Think about an animal that sleeps a LOT!";
 });
