@@ -1,4 +1,12 @@
-
+let greetings = [
+  "Good luck! 🍀",
+  "No pressure! 😄",
+  "You've got this! 💪",
+  "Let's see what you know! 🧠"
+];
+let greeting = document.getElementById("greeting-1");
+let pick = greetings[Math.floor(Math.random() * greetings.length)];
+greeting.textContent = pick;
 
 let answer1 = document.getElementById("answer-1");
 let answer2 = document.getElementById("answer-2");
