@@ -1,0 +1,14 @@
+#question-1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+button {
+  margin: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+body {
+  background-color: lightblue;
+}
