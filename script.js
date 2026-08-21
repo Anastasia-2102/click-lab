@@ -62,6 +62,7 @@ hintButton.addEventListener("click", function () {
 nextButton.addEventListener("click", function () { 
  question1.style.display = "none"; 
  question2.style.display = "block";
+ document.body.style.backgroundColor = "lightblue";
 }); 
 
 q2Answer1.addEventListener("click", function () { 
