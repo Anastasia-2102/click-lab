@@ -1,3 +1,13 @@
+let savedVisits = localStorage.getItem("visits"); 
+if (savedVisits === null) { 
+savedVisits = 0; 
+} 
+let visits = Number(savedVisits); 
+visits = visits + 1; 
+localStorage.setItem("visits", visits); 
+let visitsDisplay = document.getElementById("visits-1"); 
+visitsDisplay.textContent = "Quiz visits: " + visits;
+
 let greetings = [
   "Good luck! 🍀",
   "No pressure! 😄",
