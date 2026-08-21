@@ -5,33 +5,40 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js" defer></script>
   </head>
+  
   <body>
-  <div id="question-1-container">
+  
+  <div class="card" id="question-1-container">
     <h1 id="question-1">Which animal spends the most time sleeping?</h1>
-     <img id="animal-image" src="barnyard-animals.png" alt="Cute farm animals">
-    <button id="hint-button">💡 Hint</button>
+	
+    <img id="animal-image" src="barnyard-animals.png" alt="Cute farm animals">
+    
+	<button id="hint-button">💡 Hint</button>
      <p id="hint-1"></p>
 	 
-
+  <div class="choice-list">
     <button id="answer-1">Koala</button>
     <button id="answer-2">Dog</button>
     <button id="answer-3">Elephant</button>
-	
+  </div>
+  
 	 <p id="greeting-1"></p>
 	 <p id="result-1">Pick one</p>
-	 <p id="score-1">Score: 0</p>
+	 <p class="scoreboard" id="score-1">Score: 0</p>
 	 <p id="visits-1"></p>
 	
 	<button id="next-button">Next Question →</button>
   </div>
 	
-<div id="question-2">
-  <h1>Which animal has three hearts?</h1>
+  <div class="card" id="question-2">
+    <h1>Which animal has three hearts?</h1>
     <img id="animal-image-2" src="sea-animals.png" alt="Sea animals">
     <p>Choose the animal with three hearts:</p>
-  <button id="q2-answer-1">Octopus</button>
-  <button id="q2-answer-2">Shark</button>
-  <button id="q2-answer-3">Dolphin</button>
+  <div class="choice-list">
+    <button id="q2-answer-1">Octopus</button>
+    <button id="q2-answer-2">Shark</button>
+    <button id="q2-answer-3">Dolphin</button>
+  </div>
 
   <p id="q2-result">Pick one</p>
  </div>
