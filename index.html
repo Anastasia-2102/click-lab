@@ -2,7 +2,10 @@
 <html>
   <head>
     <title>How Well Do You Know Animals?</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/choice-list.css">
+    <link rel="stylesheet" href="css/style.css">
 	<script src="script.js" defer></script>
   </head>
   
@@ -22,6 +25,7 @@
     <button id="answer-3">Elephant</button>
   </div>
   
+  
 	 <p id="greeting-1"></p>
 	 <p id="result-1">Pick one</p>
 	 <p class="scoreboard" id="score-1">Score: 0</p>
@@ -29,6 +33,7 @@
 	
 	<button id="next-button">Next Question →</button>
   </div>
+	
 	
   <div class="card" id="question-2">
     <h1>Which animal has three hearts?</h1>
@@ -42,6 +47,24 @@
 
   <p id="q2-result">Pick one</p>
  </div>
+
+
+<div class="card" id="question-3">
+  <h1>Which animal is the fastest on land?</h1>
+
+  <img id="animal-image-3" src="land-animal.png" alt="Different land animals">
+
+  <p>Choose the fastest animal:</p>
+
+  <div class="choice-list">
+    <button>Cheetah</button>
+    <button>Lion</button>
+    <button>Horse</button>
+  </div>
+
+  <p>Pick one</p>
+</div>
+
 
 	 
   <a href="about.html">About</a>

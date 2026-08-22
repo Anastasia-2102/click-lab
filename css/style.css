@@ -1,0 +1,95 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+
+/* Scoreboard Component */
+
+.scoreboard {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+
+#question-1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+#question-1-container {
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+
+
+#question-2 h1 {
+	font-size: 32px; 
+    margin-bottom: 25px;
+}
+
+#question-1-container button {
+	margin: 8px;
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* Buttons */
+
+button {
+  margin: 8px;
+  padding: 10px 20px;  
+  font-size: 18px;  
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+  
+/* Hint */ 
+  
+#hint-button {
+  display: block;
+  margin: 10px auto;
+}
+
+#hint-1 {
+	margin: 10px;
+}
+
+
+/* Animal Images */
+
+#animal-image,
+#animal-image-2 {
+  display: block;
+  width: 400px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin: 0 auto 15px;
+}
+
+
+
+
+#question-2 { 
+  display: none; 
+}
+
+
+#question-2 p { 
+font-size: 18px; 
+}
+
+#question-2 button { 
+margin: 8px; 
+padding: 10px 20px; 
+font-size: 18px;  
+}
