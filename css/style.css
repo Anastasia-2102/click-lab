@@ -9,7 +9,7 @@ body {
 .scoreboard {
 	font-size: 40px;
 	font-weight: bold;
-	text-align; center;
+	text-align: center;
 	padding: 8px;
 }
 
@@ -69,7 +69,8 @@ button {
 /* Animal Images */
 
 #animal-image,
-#animal-image-2 {
+#animal-image-2,
+#animal-image-3 {
   display: block;
   width: 400px;
   height: 300px;
