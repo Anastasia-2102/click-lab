@@ -75,6 +75,14 @@ nextButton.addEventListener("click", function () {
  document.body.style.backgroundColor = "lightblue";
 }); 
 
+let nextButton2 = document.getElementById("next-button-2");
+let question3 = document.getElementById("question-3");
+
+nextButton2.addEventListener("click", function () {
+  question2.style.display = "none";
+  question3.style.display = "block";
+});
+
 q2Answer1.addEventListener("click", function () { 
 if (q2Answered === false) { 
 score = score + 1; 

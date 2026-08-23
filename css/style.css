@@ -7,8 +7,10 @@ body {
 /* Scoreboard Component */
 
 .scoreboard {
-	font-size: 20px;
+	font-size: 40px;
 	font-weight: bold;
+	text-align; center;
+	padding: 8px;
 }
 
 
@@ -78,7 +80,7 @@ button {
 
 
 
-
+#question-3,
 #question-2 { 
   display: none; 
 }
@@ -93,3 +95,4 @@ margin: 8px;
 padding: 10px 20px; 
 font-size: 18px;  
 }
+
