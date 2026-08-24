@@ -58,18 +58,21 @@ answer1.addEventListener("click", function () {
     score = score + 1;
     scoreDisplay.textContent = "Score: " + score;
     answered = true;
+	answer1.classList.add("correct");
   }
   result.textContent = "Correct! 🎉";
   animalImage.src = "sleeping-koala.jpg";
 });
 
 answer2.addEventListener("click", function () {
+  answer2.classList.add("wrong");
   result.textContent = "Not quite! The correct answer is Koala.";
   document.body.style.backgroundColor = "pink";
   animalImage.src = "monkey-thinking.jfif";
 });
 
 answer3.addEventListener("click", function () {
+  answer3.classList.add("wrong");
   result.textContent = "Not quite! The correct answer is Koala.";
   document.body.style.backgroundColor = "pink";
   animalImage.src = "monkey-thinking.jfif";
@@ -97,14 +100,17 @@ q2Answer1.addEventListener("click", function () {
 if (q2Answered === false) { 
 score = score + 1; 
 scoreDisplay.textContent = "Score: " + score; 
-q2Answered = true; 
+q2Answered = true;
+q2Answer1.classList.add("correct"); 
 } 
 q2Result.textContent = "Correct! 🎉"; 
 }); 
 q2Answer2.addEventListener("click", function () { 
+q2Answer2.classList.add("wrong");
 q2Result.textContent = "Not quite! The correct answer is Octopus."; 
 }); 
 q2Answer3.addEventListener("click", function () { 
+q2Answer3.classList.add("wrong");
 q2Result.textContent = "Not quite! The correct answer is Octopus."; 
 });
 
@@ -115,15 +121,18 @@ q3Answer1.addEventListener("click", function () {
     score = score + 1;
     scoreDisplay.textContent = "Score: " + score;
     q3Answered = true;
+	q3Answer1.classList.add("correct");
   }
 
   q3Result.textContent = "Correct! 🎉";
 });
 
-q3Answer2.addEventListener("click", function () {
+  q3Answer2.addEventListener("click", function () {
+  q3Answer2.classList.add("wrong");
   q3Result.textContent = "Not quite! The correct answer is Cheetah.";
 });
 
-q3Answer3.addEventListener("click", function () {
+  q3Answer3.addEventListener("click", function () {
+  q3Answer3.classList.add("wrong");
   q3Result.textContent = "Not quite! The correct answer is Cheetah.";
 });
