@@ -52,6 +52,7 @@ let q3Answered = false;
 
 let resultsPanel = document.getElementById("results-panel");
 let finalScore = document.getElementById("final-score");
+let startOverButton = document.getElementById("start-over-button");
 
 
 
@@ -156,3 +157,30 @@ function showResults() {
   resultsPanel.style.display = "block";
   finalScore.textContent = "Your final score: " + score + " out of 3";
 }
+
+startOverButton.addEventListener("click", function () {
+  score = 0;
+  answered = false;
+  q2Answered = false;
+  q3Answered = false;
+
+  scoreDisplay.textContent = "Score: 0";
+
+  question1.style.display = "block";
+  question2.style.display = "none";
+  question3.style.display = "none";
+  resultsPanel.style.display = "none";
+
+  document.body.style.backgroundColor = "lightblue";
+  answer1.classList.remove("correct", "wrong");
+answer2.classList.remove("correct", "wrong");
+answer3.classList.remove("correct", "wrong");
+
+q2Answer1.classList.remove("correct", "wrong");
+q2Answer2.classList.remove("correct", "wrong");
+q2Answer3.classList.remove("correct", "wrong");
+
+q3Answer1.classList.remove("correct", "wrong");
+q3Answer2.classList.remove("correct", "wrong");
+q3Answer3.classList.remove("correct", "wrong");
+});
