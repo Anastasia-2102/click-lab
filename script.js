@@ -172,6 +172,8 @@ startOverButton.addEventListener("click", function () {
   resultsPanel.style.display = "none";
 
   document.body.style.backgroundColor = "lightblue";
+  animalImage.src = "barnyard-animals.png";
+  
   answer1.classList.remove("correct", "wrong");
 answer2.classList.remove("correct", "wrong");
 answer3.classList.remove("correct", "wrong");
