@@ -43,6 +43,26 @@ let q2Answer3 = document.getElementById("q2-answer-3");
 let q2Result = document.getElementById("q2-result"); 
 let q2Answered = false;
 
+let q3Answer1 = document.getElementById("q3-answer-1");
+let q3Answer2 = document.getElementById("q3-answer-2");
+let q3Answer3 = document.getElementById("q3-answer-3");
+
+let q3Result = document.getElementById("q3-result");
+
+q3Answer1.addEventListener("click", function () {
+  q3Result.textContent = "Correct! 🎉";
+});
+
+q3Answer2.addEventListener("click", function () {
+  q3Result.textContent = "Not quite!";
+});
+
+q3Answer3.addEventListener("click", function () {
+  q3Result.textContent = "Not quite!";
+});
+
+
+
 answer1.addEventListener("click", function () {
 	if (answered === false) {
     score = score + 1;
