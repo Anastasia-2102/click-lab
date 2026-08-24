@@ -48,18 +48,8 @@ let q3Answer2 = document.getElementById("q3-answer-2");
 let q3Answer3 = document.getElementById("q3-answer-3");
 
 let q3Result = document.getElementById("q3-result");
+let q3Answered = false;
 
-q3Answer1.addEventListener("click", function () {
-  q3Result.textContent = "Correct! 🎉";
-});
-
-q3Answer2.addEventListener("click", function () {
-  q3Result.textContent = "Not quite!";
-});
-
-q3Answer3.addEventListener("click", function () {
-  q3Result.textContent = "Not quite!";
-});
 
 
 
@@ -116,6 +106,18 @@ q2Result.textContent = "Not quite! The correct answer is Octopus.";
 }); 
 q2Answer3.addEventListener("click", function () { 
 q2Result.textContent = "Not quite! The correct answer is Octopus."; 
+});
+
+
+
+q3Answer1.addEventListener("click", function () {
+  if (q3Answered === false) {
+    score = score + 1;
+    scoreDisplay.textContent = "Score: " + score;
+    q3Answered = true;
+  }
+
+  q3Result.textContent = "Correct! 🎉";
 });
 
 q3Answer2.addEventListener("click", function () {
