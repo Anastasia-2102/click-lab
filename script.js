@@ -50,6 +50,9 @@ let q3Answer3 = document.getElementById("q3-answer-3");
 let q3Result = document.getElementById("q3-result");
 let q3Answered = false;
 
+let resultsPanel = document.getElementById("results-panel");
+let finalScore = document.getElementById("final-score");
+
 
 
 
@@ -59,7 +62,9 @@ answer1.addEventListener("click", function () {
     scoreDisplay.textContent = "Score: " + score;
     answered = true;
 	answer1.classList.add("correct");
+	
   }
+  document.body.style.backgroundColor = "lightblue";
   result.textContent = "Correct! 🎉";
   animalImage.src = "sleeping-koala.jpg";
 });
@@ -102,8 +107,9 @@ score = score + 1;
 scoreDisplay.textContent = "Score: " + score; 
 q2Answered = true;
 q2Answer1.classList.add("correct");
-document.body.style.backgroundColor = "lightblue"; 
-} 
+
+}
+document.body.style.backgroundColor = "lightblue";  
 q2Result.textContent = "Correct! 🎉"; 
 }); 
 q2Answer2.addEventListener("click", function () { 
@@ -125,20 +131,28 @@ q3Answer1.addEventListener("click", function () {
     scoreDisplay.textContent = "Score: " + score;
     q3Answered = true;
 	q3Answer1.classList.add("correct");
-	document.body.style.backgroundColor = "lightblue";
   }
-
+  document.body.style.backgroundColor = "lightblue";
   q3Result.textContent = "Correct! 🎉";
+  showResults();
 });
 
   q3Answer2.addEventListener("click", function () {
   q3Answer2.classList.add("wrong");
   document.body.style.backgroundColor = "pink";
   q3Result.textContent = "Not quite! The correct answer is Cheetah.";
+  showResults();
 });
 
   q3Answer3.addEventListener("click", function () {
   q3Answer3.classList.add("wrong");
   document.body.style.backgroundColor = "pink";
   q3Result.textContent = "Not quite! The correct answer is Cheetah.";
+  showResults();
 });
+
+function showResults() {
+  question3.style.display = "none";
+  resultsPanel.style.display = "block";
+  finalScore.textContent = "Your final score: " + score + " out of 3";
+}
