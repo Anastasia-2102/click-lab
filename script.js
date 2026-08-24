@@ -101,16 +101,19 @@ if (q2Answered === false) {
 score = score + 1; 
 scoreDisplay.textContent = "Score: " + score; 
 q2Answered = true;
-q2Answer1.classList.add("correct"); 
+q2Answer1.classList.add("correct");
+document.body.style.backgroundColor = "lightblue"; 
 } 
 q2Result.textContent = "Correct! 🎉"; 
 }); 
 q2Answer2.addEventListener("click", function () { 
 q2Answer2.classList.add("wrong");
+document.body.style.backgroundColor = "pink";
 q2Result.textContent = "Not quite! The correct answer is Octopus."; 
 }); 
 q2Answer3.addEventListener("click", function () { 
 q2Answer3.classList.add("wrong");
+document.body.style.backgroundColor = "pink";
 q2Result.textContent = "Not quite! The correct answer is Octopus."; 
 });
 
@@ -122,6 +125,7 @@ q3Answer1.addEventListener("click", function () {
     scoreDisplay.textContent = "Score: " + score;
     q3Answered = true;
 	q3Answer1.classList.add("correct");
+	document.body.style.backgroundColor = "lightblue";
   }
 
   q3Result.textContent = "Correct! 🎉";
@@ -129,10 +133,12 @@ q3Answer1.addEventListener("click", function () {
 
   q3Answer2.addEventListener("click", function () {
   q3Answer2.classList.add("wrong");
+  document.body.style.backgroundColor = "pink";
   q3Result.textContent = "Not quite! The correct answer is Cheetah.";
 });
 
   q3Answer3.addEventListener("click", function () {
   q3Answer3.classList.add("wrong");
+  document.body.style.backgroundColor = "pink";
   q3Result.textContent = "Not quite! The correct answer is Cheetah.";
 });
