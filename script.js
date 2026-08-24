@@ -74,13 +74,13 @@ answer1.addEventListener("click", function () {
 });
 
 answer2.addEventListener("click", function () {
-  result.textContent = "Not quite!";
+  result.textContent = "Not quite! The correct answer is Koala.";
   document.body.style.backgroundColor = "pink";
   animalImage.src = "monkey-thinking.jfif";
 });
 
 answer3.addEventListener("click", function () {
-  result.textContent = "Not quite!";
+  result.textContent = "Not quite! The correct answer is Koala.";
   document.body.style.backgroundColor = "pink";
   animalImage.src = "monkey-thinking.jfif";
 });
@@ -112,9 +112,16 @@ q2Answered = true;
 q2Result.textContent = "Correct! 🎉"; 
 }); 
 q2Answer2.addEventListener("click", function () { 
-q2Result.textContent = "Not quite!"; 
+q2Result.textContent = "Not quite! The correct answer is Octopus."; 
 }); 
 q2Answer3.addEventListener("click", function () { 
-q2Result.textContent = "Not quite!"; 
+q2Result.textContent = "Not quite! The correct answer is Octopus."; 
 });
 
+q3Answer2.addEventListener("click", function () {
+  q3Result.textContent = "Not quite! The correct answer is Cheetah.";
+});
+
+q3Answer3.addEventListener("click", function () {
+  q3Result.textContent = "Not quite! The correct answer is Cheetah.";
+});
