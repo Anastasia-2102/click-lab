@@ -1,6 +1,22 @@
+let questionSet = [
+  {
+    prompt: "Which animal spends the most time sleeping?",
+    correctAnswer: "Koala"
+  },
+  {
+    prompt: "Which animal has three hearts?",
+    correctAnswer: "Octopus"
+  },
+  {
+    prompt: "Which animal is the fastest on land?",
+    correctAnswer: "Cheetah"
+  }
+];
+
+
 let savedVisits = localStorage.getItem("visits"); 
-if (savedVisits === null) { 
-savedVisits = 0; 
+  if (savedVisits === null) { 
+  savedVisits = 0; 
 } 
 let visits = Number(savedVisits); 
 visits = visits + 1; 
@@ -57,34 +73,47 @@ let startOverButton = document.getElementById("start-over-button");
 
 
 
+function checkAnswer1(button) {
+  let q1 = questionSet[0];
+
+  if (button.value === q1.correctAnswer) {
+    return "Correct! 🎉";
+  } else {
+    return "Not quite! The correct answer is " + q1.correctAnswer + ".";
+  }
+}
+
 answer1.addEventListener("click", function () {
-	if (answered === false) {
+  if (answered === false) {
     score = score + 1;
     scoreDisplay.textContent = "Score: " + score;
     answered = true;
-	answer1.classList.add("correct");
-	
+    answer1.classList.add("correct");
   }
+
   document.body.style.backgroundColor = "lightblue";
-  result.textContent = "Correct! 🎉";
+  result.textContent = checkAnswer1(answer1);
   animalImage.src = "sleeping-koala.jpg";
 });
 
 answer2.addEventListener("click", function () {
   answer2.classList.add("wrong");
-  result.textContent = "Not quite! The correct answer is Koala.";
+  result.textContent = checkAnswer1(answer2);
   document.body.style.backgroundColor = "pink";
   animalImage.src = "monkey-thinking.jfif";
 });
 
 answer3.addEventListener("click", function () {
   answer3.classList.add("wrong");
-  result.textContent = "Not quite! The correct answer is Koala.";
+  result.textContent = checkAnswer1(answer3);
   document.body.style.backgroundColor = "pink";
   animalImage.src = "monkey-thinking.jfif";
 });
 
-hintButton.addEventListener("click", function () {
+
+
+
+  hintButton.addEventListener("click", function () {
   hint.textContent = "Hint: Think about an animal that sleeps a LOT!";
 });
 
@@ -102,53 +131,69 @@ nextButton2.addEventListener("click", function () {
   question3.style.display = "block";
 });
 
-q2Answer1.addEventListener("click", function () { 
-if (q2Answered === false) { 
-score = score + 1; 
-scoreDisplay.textContent = "Score: " + score; 
-q2Answered = true;
-q2Answer1.classList.add("correct");
+function checkAnswer2(button) {
+  let q2 = questionSet[1];
 
+  if (button.value === q2.correctAnswer) {
+    return "Correct! 🎉";
+  } else {
+    return "Not quite! The correct answer is " + q2.correctAnswer + ".";
+  }
 }
-document.body.style.backgroundColor = "lightblue";  
-q2Result.textContent = "Correct! 🎉"; 
-}); 
-q2Answer2.addEventListener("click", function () { 
-q2Answer2.classList.add("wrong");
-document.body.style.backgroundColor = "pink";
-q2Result.textContent = "Not quite! The correct answer is Octopus."; 
-}); 
-q2Answer3.addEventListener("click", function () { 
-q2Answer3.classList.add("wrong");
-document.body.style.backgroundColor = "pink";
-q2Result.textContent = "Not quite! The correct answer is Octopus."; 
+
+q2Answer1.addEventListener("click", function () {
+  q2Result.textContent = checkAnswer2(q2Answer1);
+  document.body.style.backgroundColor = "lightblue";
+  q2Answer1.classList.add("correct");
+});
+
+q2Answer2.addEventListener("click", function () {
+  q2Result.textContent = checkAnswer2(q2Answer2);
+  document.body.style.backgroundColor = "pink";
+  q2Answer2.classList.add("wrong");
+});
+
+q2Answer3.addEventListener("click", function () {
+  q2Result.textContent = checkAnswer2(q2Answer3);
+  document.body.style.backgroundColor = "pink";
+  q2Answer3.classList.add("wrong");
 });
 
 
+function checkAnswer3(button) {
+  let q3 = questionSet[2];
+
+  if (button.value === q3.correctAnswer) {
+    return "Correct! 🎉";
+  } else {
+    return "Not quite! The correct answer is " + q3.correctAnswer + ".";
+  }
+}
 
 q3Answer1.addEventListener("click", function () {
   if (q3Answered === false) {
     score = score + 1;
     scoreDisplay.textContent = "Score: " + score;
     q3Answered = true;
-	q3Answer1.classList.add("correct");
+    q3Answer1.classList.add("correct");
   }
+
   document.body.style.backgroundColor = "lightblue";
-  q3Result.textContent = "Correct! 🎉";
+  q3Result.textContent = checkAnswer3(q3Answer1);
   showResults();
 });
 
-  q3Answer2.addEventListener("click", function () {
+q3Answer2.addEventListener("click", function () {
   q3Answer2.classList.add("wrong");
   document.body.style.backgroundColor = "pink";
-  q3Result.textContent = "Not quite! The correct answer is Cheetah.";
+  q3Result.textContent = checkAnswer3(q3Answer2);
   showResults();
 });
 
-  q3Answer3.addEventListener("click", function () {
+q3Answer3.addEventListener("click", function () {
   q3Answer3.classList.add("wrong");
   document.body.style.backgroundColor = "pink";
-  q3Result.textContent = "Not quite! The correct answer is Cheetah.";
+  q3Result.textContent = checkAnswer3(q3Answer3);
   showResults();
 });
 
@@ -156,6 +201,7 @@ function showResults() {
   question3.style.display = "none";
   resultsPanel.style.display = "block";
   finalScore.textContent = "Your final score: " + score + " out of 3";
+  document.body.style.backgroundColor = "lightblue";
 }
 
 startOverButton.addEventListener("click", function () {
@@ -175,14 +221,14 @@ startOverButton.addEventListener("click", function () {
   animalImage.src = "barnyard-animals.png";
   
   answer1.classList.remove("correct", "wrong");
-answer2.classList.remove("correct", "wrong");
-answer3.classList.remove("correct", "wrong");
+  answer2.classList.remove("correct", "wrong");
+  answer3.classList.remove("correct", "wrong");
 
-q2Answer1.classList.remove("correct", "wrong");
-q2Answer2.classList.remove("correct", "wrong");
-q2Answer3.classList.remove("correct", "wrong");
+  q2Answer1.classList.remove("correct", "wrong");
+  q2Answer2.classList.remove("correct", "wrong");
+  q2Answer3.classList.remove("correct", "wrong");
 
-q3Answer1.classList.remove("correct", "wrong");
-q3Answer2.classList.remove("correct", "wrong");
-q3Answer3.classList.remove("correct", "wrong");
+  q3Answer1.classList.remove("correct", "wrong");
+  q3Answer2.classList.remove("correct", "wrong");
+  q3Answer3.classList.remove("correct", "wrong");
 });

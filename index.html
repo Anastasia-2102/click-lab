@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>How Well Do You Know Animals?</title>
+	
+	<!-- Pico CSS and project stylesheets -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/choice-list.css">
@@ -10,91 +12,117 @@
 	<link rel="stylesheet" href="css/result-box.css">
 	<link rel="stylesheet" href="css/answer-status.css">
     <link rel="stylesheet" href="css/style.css">
+	
+   <!-- Connect JavaScript file -->
 	<script src="script.js" defer></script>
   </head>
   
   <body>
   
-    <div class="banner">
+   <!-- Quiz welcome banner -->
+   <div class="banner">
     🐾 Welcome to the Animal Quiz!
    </div>
-   
-  <p class="scoreboard" id="score-1">Score: 0</p>
   
-  <div class="card" id="question-1-container">
-    <h1 id="question-1">
-     Which animal spends the most time sleeping?
+   <!-- Scoreboard -->  
+   <p class="scoreboard" id="score-1">Score: 0</p>
+  
+   <!-- Question 1 -->
+   <div class="card" id="question-1-container">
+     <h1 id="question-1">
+      Which animal spends the most time sleeping?
       <span class="badge">EASY</span>
-   </h1>
-	
+     </h1>
+   
+   <!-- Question 1 image -->
     <img id="animal-image" src="barnyard-animals.png" alt="Cute farm animals">
     
+   <!-- Hint button and hidden hint text -->
 	<button id="hint-button">💡 Hint</button>
      <p id="hint-1"></p>
-	 
+	
+   <!-- Answer choices for Question 1 -->
   <div class="choice-list">
-    <button id="answer-1">Koala</button>
-    <button id="answer-2">Dog</button>
-    <button id="answer-3">Elephant</button>
+    <button id="answer-1" value="Koala">Koala</button>
+    <button id="answer-2" value="Dog">Dog</button>
+    <button id="answer-3" value="Elephan">Elephant</button>
   </div>
   
-  
+   <!-- Greeting and answer result -->
 	 <p id="greeting-1"></p>
 	 <p class="result-box" id="result-1">Pick one</p>
 	 
+   <!-- Number of quiz visits -->
 	 <p id="visits-1"></p>
 	
+   <!-- Move to Question 2 -->
 	<button id="next-button">Next Question →</button>
   </div>
 	
-	
+   <!-- Question 2 -->
   <div class="card" id="question-2">
     <h1>Which animal has three hearts?
       <span class="badge">MEDIUM</span>
     </h1>
+   <!-- Question 2 image -->
     <img id="animal-image-2" src="sea-animals.png" alt="Sea animals">
     <p>Choose the animal with three hearts:</p>
+	
+   <!-- Answer choices for Question 2 -->
   <div class="choice-list">
-    <button id="q2-answer-1">Octopus</button>
-    <button id="q2-answer-2">Shark</button>
-    <button id="q2-answer-3">Dolphin</button>
+    <button id="q2-answer-1" value="Octopus">Octopus</button>
+    <button id="q2-answer-2" value="Shark">Shark</button>
+    <button id="q2-answer-3" value="Dolphin">Dolphin</button>
   </div>
 
-  <p class="result-box" id="q2-result">Pick one</p>
-
-  <button id="next-button-2">Next Question →</button>
- </div>
+   <!-- Question 2 result -->
+     <p class="result-box" id="q2-result">Pick one</p>
 
 
-<div class="card" id="question-3">
-  <h1>Which animal is the fastest on land?
+   <!-- Move to Question 3 -->
+    <button id="next-button-2">Next Question →</button>
+   </div>
+
+   <!-- Question 3 -->
+   <div class="card" id="question-3">
+    <h1>Which animal is the fastest on land?
    <span class="badge">HARD</span>
-  </h1>
-
-  <img id="animal-image-3" src="land-animal.png" alt="Different land animals">
-
-  <p>Choose the fastest animal:</p>
-
-  <div class="choice-list">
-    <button id="q3-answer-1">Cheetah</button>
-    <button id="q3-answer-2">Lion</button>
-    <button id="q3-answer-3">Horse</button>
-  </div>
-
-  <p class="result-box" id="q3-result">Pick one</p>
-</div>
-
-<div class="card" id="results-panel">
-  <h1>🎉 Quiz Complete!</h1>
-  <p id="final-score"></p>
-  <button id="start-over-button">Start Over</button>
-</div>
+     </h1>
 
 
-	 
+   <!-- Question 3 image -->
+    <img id="animal-image-3" src="land-animal.png" alt="Different land animals">
+
+     <p>Choose the fastest animal:</p>
+
+
+   <!-- Answer choices for Question 3 -->
+   <div class="choice-list">
+    <button id="q3-answer-1" value="Cheetah">Cheetah</button>
+    <button id="q3-answer-2" value="Lion">Lion</button>
+    <button id="q3-answer-3" value="Horse">Horse</button>
+   </div>
+
+   <!-- Question 3 result -->
+     <p class="result-box" id="q3-result">Pick one</p>
+   </div>
+
+   <!-- Final results panel, hidden until the quiz is complete -->
+   <div class="card" id="results-panel">
+    <h1>🎉 Quiz Complete!</h1>
+     <p id="final-score"></p>
+  
+  <!-- Restart the quiz -->
+    <button id="start-over-button">Start Over</button>
+   </div>
+
+
+   <!-- About page link -->
   <a href="about.html">About</a>
 
+   <!-- Helpful animal information links -->
   <footer>
+  
     <p>Learn more:</p>
     <a href="https://en.wikipedia.org">Wikipedia</a>
     <a href="https://www.britannica.com">Britannica</a>
