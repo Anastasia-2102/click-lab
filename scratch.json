@@ -1,0 +1,47 @@
+{"message":"https://images.dog.ceo/breeds/hound-afghan/n02088094_2062.jpg","status":"success"}
+
+{
+  "message": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2062.jpg",
+  "status": "success"
+}
+
+{
+  "message": [
+    "https://images.dog.ceo/breeds/hound-basset/n02088238_10013.jpg",
+    "https://images.dog.ceo/breeds/hound-english/n02089973_2781.jpg",
+    "https://images.dog.ceo/breeds/hound-walker/n02089867_3448.jpg"
+  ],
+  "status": "success"
+}
+
+[
+  {
+    "id": "7lu",
+	"url": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/7lu.jpg",
+	"width": 500,
+	"height": 375
+  },
+  {
+	"id": "bkg",
+	"url": "https://s3.us-west-2.amazonaws.com/cdn2.thecatapi.com/images/bkg.jpg",
+	"width": 720,
+	"height": 404
+  }
+]
+
+{
+  "count": 1351,
+  "next": "https://pokeapi.co/api/v2/pokemon?offset=20&limit=20",
+  "previous": null,
+  "results": [
+    {
+	  "name": "bulbasaur",
+	  "url": "https://pokeapi.co/api/v2/pokemon/1/"
+    },
+    {
+	  "name": "ivysaur",
+	  "url": "https://pokeapi.co/api/v2/pokemon/2/"
+    }
+  ]
+}  
+

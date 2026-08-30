@@ -97,6 +97,10 @@ answer1.addEventListener("click", function () {
 });
 
 answer2.addEventListener("click", function () {
+  if (answered === false) {
+    answered = true;
+  }
+
   answer2.classList.add("wrong");
   result.textContent = checkAnswer1(answer2);
   document.body.style.backgroundColor = "pink";
@@ -104,6 +108,10 @@ answer2.addEventListener("click", function () {
 });
 
 answer3.addEventListener("click", function () {
+  if (answered === false) {
+    answered = true;
+  }
+
   answer3.classList.add("wrong");
   result.textContent = checkAnswer1(answer3);
   document.body.style.backgroundColor = "pink";
@@ -129,6 +137,7 @@ let question3 = document.getElementById("question-3");
 nextButton2.addEventListener("click", function () {
   question2.style.display = "none";
   question3.style.display = "block";
+  document.body.style.backgroundColor = "lightblue";
 });
 
 function checkAnswer2(button) {
@@ -142,18 +151,32 @@ function checkAnswer2(button) {
 }
 
 q2Answer1.addEventListener("click", function () {
+  if (q2Answered === false) {
+    score = score + 1;
+    scoreDisplay.textContent = "Score: " + score;
+    q2Answered = true;
+  }
+
   q2Result.textContent = checkAnswer2(q2Answer1);
   document.body.style.backgroundColor = "lightblue";
   q2Answer1.classList.add("correct");
 });
 
 q2Answer2.addEventListener("click", function () {
+  if (q2Answered === false) {
+    q2Answered = true;
+  }
+
   q2Result.textContent = checkAnswer2(q2Answer2);
   document.body.style.backgroundColor = "pink";
   q2Answer2.classList.add("wrong");
 });
 
 q2Answer3.addEventListener("click", function () {
+  if (q2Answered === false) {
+    q2Answered = true;
+  }
+
   q2Result.textContent = checkAnswer2(q2Answer3);
   document.body.style.backgroundColor = "pink";
   q2Answer3.classList.add("wrong");
@@ -183,7 +206,13 @@ q3Answer1.addEventListener("click", function () {
   showResults();
 });
 
+
+
 q3Answer2.addEventListener("click", function () {
+  if (q3Answered === false) {
+    q3Answered = true;
+  }
+
   q3Answer2.classList.add("wrong");
   document.body.style.backgroundColor = "pink";
   q3Result.textContent = checkAnswer3(q3Answer2);
@@ -191,11 +220,16 @@ q3Answer2.addEventListener("click", function () {
 });
 
 q3Answer3.addEventListener("click", function () {
+  if (q3Answered === false) {
+    q3Answered = true;
+  }
+
   q3Answer3.classList.add("wrong");
   document.body.style.backgroundColor = "pink";
   q3Result.textContent = checkAnswer3(q3Answer3);
   showResults();
 });
+
 
 function showResults() {
   question3.style.display = "none";
