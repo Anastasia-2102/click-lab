@@ -1,3 +1,5 @@
+// Question data
+
 let questionSet = [
   {
     prompt: "Which animal spends the most time sleeping?",
@@ -14,6 +16,8 @@ let questionSet = [
 ];
 
 
+// Count and display quiz visits
+
 let savedVisits = localStorage.getItem("visits"); 
   if (savedVisits === null) { 
   savedVisits = 0; 
@@ -23,6 +27,8 @@ visits = visits + 1;
 localStorage.setItem("visits", visits); 
 let visitsDisplay = document.getElementById("visits-1"); 
 visitsDisplay.textContent = "Quiz visits: " + visits;
+
+// Display a random greeting
 
 let greetings = [
   "Good luck! 🍀",
@@ -71,7 +77,7 @@ let finalScore = document.getElementById("final-score");
 let startOverButton = document.getElementById("start-over-button");
 
 
-
+// Check the answer for Question 1
 
 function checkAnswer1(button) {
   let q1 = questionSet[0];
@@ -119,11 +125,13 @@ answer3.addEventListener("click", function () {
 });
 
 
-
+// Show a hint when the hint button is clicked
 
   hintButton.addEventListener("click", function () {
   hint.textContent = "Hint: Think about an animal that sleeps a LOT!";
 });
+
+// Move from Question 1 to Question 2
 
 nextButton.addEventListener("click", function () { 
  question1.style.display = "none"; 
@@ -134,11 +142,15 @@ nextButton.addEventListener("click", function () {
 let nextButton2 = document.getElementById("next-button-2");
 let question3 = document.getElementById("question-3");
 
+// Move from Question 2 to Question 3
+
 nextButton2.addEventListener("click", function () {
   question2.style.display = "none";
   question3.style.display = "block";
   document.body.style.backgroundColor = "lightblue";
 });
+
+// Check the answer for Question 2
 
 function checkAnswer2(button) {
   let q2 = questionSet[1];
@@ -182,6 +194,7 @@ q2Answer3.addEventListener("click", function () {
   q2Answer3.classList.add("wrong");
 });
 
+// Check the answer for Question 3
 
 function checkAnswer3(button) {
   let q3 = questionSet[2];
@@ -230,6 +243,7 @@ q3Answer3.addEventListener("click", function () {
   showResults();
 });
 
+// Display the final score
 
 function showResults() {
   question3.style.display = "none";
@@ -237,6 +251,8 @@ function showResults() {
   finalScore.textContent = "Your final score: " + score + " out of 3";
   document.body.style.backgroundColor = "lightblue";
 }
+
+// Reset the quiz and start over
 
 startOverButton.addEventListener("click", function () {
   score = 0;
